@@ -55,6 +55,7 @@ def scrape_offers():
 
 
 def main():
+    send_telegram_message("Testowa wiadomość – skrypt działa!")
     print("Scraper startuje...")
     try:
         offers = scrape_offers()
