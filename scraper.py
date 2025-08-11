@@ -33,7 +33,7 @@ def save_history(history):
     with open(HISTORY_FILE, "w") as f:
         json.dump(history, f)
 
-ddef scrape_offers():
+def scrape_offers():
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
