@@ -33,9 +33,9 @@ def save_history(history):
     with open(HISTORY_FILE, "w") as f:
         json.dump(history, f)
 
-def scrape_offers():
+ddef scrape_offers():
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
     resp = requests.get(OLX_URL, headers=headers)
     resp.raise_for_status()
@@ -52,6 +52,7 @@ def scrape_offers():
             link = "https://www.olx.pl" + link
         offers.append({"title": title, "link": link})
     return offers
+
 
 def main():
     print("Scraper startuje...")
